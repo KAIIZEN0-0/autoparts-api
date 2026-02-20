@@ -1,12 +1,8 @@
-const app = require("./app");
-const app = express();
-const autoSupplyRoutes = require("./routes/autoparts.routes");
+require("dotenv").config(); 
+const app = require("./app"); // 'app' is only declared once here!
 
-app.use(express.json());
-
-app.use("/api", autoPartsRoutes);
-const PORT = process.env.PORT || 3306;
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
-  console.log(`AutoPartsAPI is live and running on port ${PORT}`);
+  console.log(`AutoParts API is live and running on http://localhost:${PORT}`);
 });
