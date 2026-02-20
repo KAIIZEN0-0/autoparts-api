@@ -1,4 +1,4 @@
-const AutoSupply = require("../models/autoparts.model");
+const AutoSupply = require("../models/autoparts.models");
 
 // 1. GET /parts
 const getAllParts = async (req, res) => {
